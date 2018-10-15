@@ -1,0 +1,18 @@
+﻿version: '3'
+
+services :
+   db:
+    image: dockersql
+    container_name: docker_sql
+    build:
+     context: ../ConferenceApp/DBScript/
+     dockerfile: Dockerfile
+    environment:
+            SA_PASSWORD: "Your_password123"
+            ACCEPT_EULA: "Y"
+            MSSQL_PID: Developer
+            MSSQL_DB: dev
+    ports:
+     - 5432:5432
+     - 1433:1433
+  
