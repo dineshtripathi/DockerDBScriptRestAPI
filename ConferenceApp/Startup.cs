@@ -19,7 +19,7 @@ namespace ConferenceApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = @"Server=10.0.75.1,1433;Database=DockerDBTest;User=sa;Password=Your_password123;";
+            var connection = @"Server= 10.0.75.1,1433;Database=DockerDBTest;User=sa;Password=Your_password123;";
 
           //  var connectionString = Configuration.GetConnectionString("DbConnection");
             services.AddEntityFrameworkSqlServer()
